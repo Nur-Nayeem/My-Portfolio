@@ -23,10 +23,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode}) => {
             <div className="order-2 lg:order-1">
               <h3 className="text-2xl font-bold mb-4">Who am I?</h3>
               <p className="text-lg mb-6 leading-relaxed">
-                I'm a passionate full-stack developer specializing in the MERN
-                stack with over 5 years of experience building robust web
-                applications. I combine technical expertise with a keen eye for
-                design to create seamless user experiences.
+                I'm a passionate aspiring full-stack developer focusing on the MERN stack. While I’m just starting out, I’m constantly building projects to sharpen my skills and create user-friendly web applications. I’m eager to grow, learn, and turn ideas into functional, well-designed experiences.
               </p>
               <p className="text-lg mb-8 leading-relaxed">
                 My journey in web development began with a fascination for
