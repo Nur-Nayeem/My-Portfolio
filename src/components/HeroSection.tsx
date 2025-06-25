@@ -53,7 +53,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </button>
         </div>
       </div>
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 transform -translate-x-1/2 animate-bounce">
         <button
           onClick={() => scrollToSection("about")}
           className="text-3xl opacity-70 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
