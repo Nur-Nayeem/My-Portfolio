@@ -4,6 +4,7 @@ import emailjs from "emailjs-com";
 import "react-toastify/dist/ReactToastify.css";
 
 
+
 interface ContactSectionProps {
   darkMode: boolean;
 }
@@ -18,10 +19,10 @@ const ContactSection = ({ darkMode }: ContactSectionProps) => {
 
     emailjs
       .sendForm(
-        "service_3hto8na",      // Replace with your EmailJS Service ID
-        "template_shlof2s",     // Replace with your EmailJS Template ID
+        import.meta.env.SERVICE_ID,     
+        import.meta.env.TEMPLATE_ID,     
         formRef.current,
-        "voM0si1nH1l7EKo0P"          // Replace with your EmailJS Public Key (user ID)
+        import.meta.env.PUBLIC_KEY       
       )
       .then(
         () => {
