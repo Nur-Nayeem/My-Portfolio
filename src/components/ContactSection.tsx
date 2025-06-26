@@ -18,11 +18,17 @@ const ContactSection = ({ darkMode }: ContactSectionProps) => {
     if (!formRef.current) return;
 
     emailjs
+      // .sendForm(
+      //   import.meta.env.SERVICE_ID,     
+      //   import.meta.env.TEMPLATE_ID,     
+      //   formRef.current,
+      //   import.meta.env.PUBLIC_KEY       
+      // )
       .sendForm(
-        import.meta.env.SERVICE_ID,     
-        import.meta.env.TEMPLATE_ID,     
+        "service_v1kel1b",     
+        "template_shlof2s",     
         formRef.current,
-        import.meta.env.PUBLIC_KEY       
+        "voM0si1nH1l7EKo0P"       
       )
       .then(
         () => {
