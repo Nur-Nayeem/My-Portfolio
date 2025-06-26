@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import * as echarts from "echarts";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -8,6 +7,7 @@ import BlogSection from "./components/BlogPost";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import { skills } from "./data/my-data";
+import { useEffect, useState } from "react";
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
