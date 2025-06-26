@@ -1,11 +1,9 @@
-import React from "react";
-
 interface FooterProps {
   darkMode: boolean;
   scrollToSection: (id: string) => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ darkMode, scrollToSection }) => {
+const Footer= ({ darkMode, scrollToSection } :FooterProps) => {
   return (
           <footer
         className={`py-12 ${

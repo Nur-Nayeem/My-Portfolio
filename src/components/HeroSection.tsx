@@ -1,14 +1,12 @@
-import React from "react";
-
 interface HeroSectionProps {
   darkMode: boolean;
   scrollToSection: (sectionId: string) => void;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({
+const HeroSection = ({
   darkMode,
   scrollToSection,
-}) => {
+}:HeroSectionProps) => {
   return (
     <section
       id="home"
@@ -17,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-600 opacity-10"></div>
         <img
-          src="https://readdy.ai/api/search-image?query=Abstract%20technology%20background%20with%20code%20elements%2C%20modern%20digital%20landscape%20with%20subtle%20grid%20patterns%20and%20glowing%20particles%2C%20professional%20tech%20atmosphere%20with%20clean%20design%2C%20perfect%20for%20developer%20portfolio%20hero%20section&width=1440&height=800&seq=7&orientation=landscape"
+          src="https://res.cloudinary.com/dx43z0uml/image/upload/v1750931132/8640a474ed679be89f0709c11b3927ba_mklawb.jpg"
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />

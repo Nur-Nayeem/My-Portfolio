@@ -1,5 +1,3 @@
-import React from "react";
-
 interface NavbarProps {
   darkMode: boolean;
   toggleDarkMode: () => void;
@@ -9,14 +7,14 @@ interface NavbarProps {
   scrollToSection: (section: string) => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({
+const Navbar = ({
   darkMode,
   toggleDarkMode,
   menuOpen,
   toggleMenu,
   activeSection,
   scrollToSection,
-}) => {
+}: NavbarProps) => {
   return (
           <nav
         className={`fixed w-full z-50 ${

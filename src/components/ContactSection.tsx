@@ -1,11 +1,40 @@
-import React from "react";
+import { useRef } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import emailjs from "emailjs-com";
+import "react-toastify/dist/ReactToastify.css";
+
 
 interface ContactSectionProps {
   darkMode: boolean;
-  handleContactSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const ContactSection: React.FC<ContactSectionProps> = ({ darkMode, handleContactSubmit }) => {
+const ContactSection = ({ darkMode }: ContactSectionProps) => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        "service_3hto8na",      // Replace with your EmailJS Service ID
+        "template_shlof2s",     // Replace with your EmailJS Template ID
+        formRef.current,
+        "voM0si1nH1l7EKo0P"          // Replace with your EmailJS Public Key (user ID)
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!");
+          formRef.current?.reset();
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          toast.error("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
           <section
         id="contact"
@@ -13,6 +42,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode, handleContact
           darkMode ? "bg-gray-900" : "bg-white"
         } transition-colors duration-300`}
       >
+        <ToastContainer position="top-center" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -118,6 +148,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode, handleContact
             </div>
             <div className="lg:col-span-3">
               <form
+                ref={formRef}
                 onSubmit={handleContactSubmit}
                 className={`p-8 rounded-xl shadow-lg ${
                   darkMode ? "bg-gray-800" : "bg-white"
@@ -134,6 +165,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode, handleContact
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       className={`w-full px-4 py-3 rounded-lg ${
                         darkMode
                           ? "bg-gray-700 border-gray-600 text-white"
@@ -153,6 +185,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode, handleContact
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       className={`w-full px-4 py-3 rounded-lg ${
                         darkMode
                           ? "bg-gray-700 border-gray-600 text-white"
@@ -173,6 +206,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode, handleContact
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
                     className={`w-full px-4 py-3 rounded-lg ${
                       darkMode
                         ? "bg-gray-700 border-gray-600 text-white"
@@ -191,6 +225,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode, handleContact
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
                     className={`w-full px-4 py-3 rounded-lg ${
                       darkMode

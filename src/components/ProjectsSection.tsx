@@ -1,4 +1,3 @@
-import React from "react";
 import { projects } from "../data/my-data";
 
 
@@ -6,9 +5,9 @@ interface ProjectsSectionProps {
   darkMode: boolean;
 }
 
-const ProjectsSection: React.FC<ProjectsSectionProps> = ({
+const ProjectsSection = ({
   darkMode
-}) => {
+}:ProjectsSectionProps) => {
   return (
     <section
       id="projects"

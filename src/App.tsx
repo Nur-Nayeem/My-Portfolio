@@ -58,11 +58,7 @@ const App = () => {
     }
   }, [darkMode]);
   // Handle form submission
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    alert("Thank you for your message! I will get back to you soon.");
-  };
+  
   // Toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -131,8 +127,7 @@ const App = () => {
     darkMode={darkMode} />
       {/* Contact Section */}
     <ContactSection 
-    darkMode={darkMode} 
-    handleContactSubmit={handleContactSubmit} />
+    darkMode={darkMode}  />
       {/* Footer */}
     <Footer 
     darkMode={darkMode} 

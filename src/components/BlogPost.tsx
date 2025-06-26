@@ -1,4 +1,3 @@
-import React from "react";
 import { blogPosts } from "../data/my-data";
 
 
@@ -6,7 +5,7 @@ interface BlogSectionProps {
   darkMode: boolean;
 }
 
-const BlogSection: React.FC<BlogSectionProps> = ({ darkMode }) => {
+const BlogSection= ({ darkMode }:BlogSectionProps) => {
   return (
     <section
       id="blog"
