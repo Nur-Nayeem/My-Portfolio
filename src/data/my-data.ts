@@ -42,6 +42,17 @@ export const projects = [
     //   demoLink: "https://dashboard-demo.com",
       githubLink: "https://github.com/Nur-Nayeem/E_library_with_Audio_Books",
     },
+    {
+      id: 3,
+      title: "Ai Image Generator",
+      description:
+        "Transforms text prompts into high-resolution images in various styles using advanced AI.",
+      technologies: ["HTML", "CSS", "JavaScript","Node.js","Express"],
+      image:
+        "https://res.cloudinary.com/dx43z0uml/image/upload/v1751913911/Screenshot_from_2025-07-08_00-24-13_igqqwu.png",
+       demoLink: "https://nur-nayeem.github.io/deploy--ai-image-generator-client/",
+      githubLink: "https://github.com/Nur-Nayeem/Ai-Image-Generator",
+    },
   ];
 
 
