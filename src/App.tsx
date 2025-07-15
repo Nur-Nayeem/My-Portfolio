@@ -123,8 +123,8 @@ const App = () => {
     <ProjectsSection
     darkMode={darkMode}/>
       {/* Blog Section */}
-    <BlogSection 
-    darkMode={darkMode} />
+    {/* <BlogSection 
+    darkMode={darkMode} /> */}
       {/* Contact Section */}
     <ContactSection 
     darkMode={darkMode}  />

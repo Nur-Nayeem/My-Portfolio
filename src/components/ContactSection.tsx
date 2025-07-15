@@ -43,11 +43,11 @@ const ContactSection = ({ darkMode }: ContactSectionProps) => {
   };
 
   return (
-          <section
+    <section
         id="contact"
-        className={`py-20 ${
-          darkMode ? "bg-gray-900" : "bg-white"
-        } transition-colors duration-300`}
+       className={`py-20 ${
+        darkMode ? "bg-gray-800" : "bg-gray-50"
+      } transition-colors duration-300`}
       >
         <ToastContainer position="top-center" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
