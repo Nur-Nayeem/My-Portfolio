@@ -59,16 +59,6 @@ const Navbar = ({
                 Projects
               </button>
               <button
-                onClick={() => scrollToSection("blog")}
-                className={`${
-                  activeSection === "blog"
-                    ? "text-purple-600 dark:text-purple-400"
-                    : ""
-                } hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 cursor-pointer whitespace-nowrap`}
-              >
-                Blog
-              </button>
-              <button
                 onClick={() => scrollToSection("contact")}
                 className={`${
                   activeSection === "contact"
@@ -153,16 +143,6 @@ const Navbar = ({
               } transition-colors duration-200 w-full text-left cursor-pointer whitespace-nowrap`}
             >
               Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("blog")}
-              className={`block px-3 py-2 rounded-md text-base font-medium ${
-                activeSection === "blog"
-                  ? "bg-indigo-600 text-white"
-                  : "hover:bg-gray-200 dark:hover:bg-gray-700"
-              } transition-colors duration-200 w-full text-left cursor-pointer whitespace-nowrap`}
-            >
-              Blog
             </button>
             <button
               onClick={() => scrollToSection("contact")}
