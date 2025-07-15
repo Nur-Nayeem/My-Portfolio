@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
-import BlogSection from "./components/BlogPost";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import { skills } from "./data/my-data";
@@ -116,22 +115,25 @@ const App = () => {
       darkMode={darkMode} 
       scrollToSection={scrollToSection} 
       />
+
       {/* About Section */}
     <AboutSection 
     darkMode={darkMode} />
+
       {/* Projects Section */}
     <ProjectsSection
     darkMode={darkMode}/>
-      {/* Blog Section */}
-    {/* <BlogSection 
-    darkMode={darkMode} /> */}
+    
       {/* Contact Section */}
     <ContactSection 
     darkMode={darkMode}  />
+
       {/* Footer */}
     <Footer 
     darkMode={darkMode} 
     scrollToSection={scrollToSection} />
+
+
       {/* Scroll to top button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
