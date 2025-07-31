@@ -8,12 +8,12 @@ interface ProjectsSectionProps {
 interface ProjectCardsProps {
   darkMode: boolean;
   id: number;
-  image: string; 
+  image: string;
   title: string;
   description: string;
-  technologies: string[]; 
-  demoLink?: string; 
-  githubLink: string; 
+  technologies: string[];
+  demoLink?: string;
+  githubLink: string;
 }
 
 
@@ -33,7 +33,7 @@ const ProjectCard = ({ darkMode, id, image, title, description, technologies, de
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
+        <p className={`${!darkMode ? 'text-gray-600' : 'text-gray-300'} mb-4`}>
           {description}
         </p>
         <div className="flex flex-wrap gap-2 mb-4">
@@ -107,7 +107,7 @@ const ProjectsSection = ({
 
         <div className="text-center mt-12">
           <a
-            href="https://github.com/nur-nayeem"
+            href="https://github.com/Nur-Nayeem?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 !rounded-button cursor-pointer whitespace-nowrap"
