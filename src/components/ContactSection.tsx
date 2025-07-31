@@ -49,12 +49,12 @@ const ContactSection = ({ darkMode }: ContactSectionProps) => {
             Get In Touch
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto"></div>
-          <p className="mt-4 text-lg max-w-2xl mx-auto">
+          <p className="mt-4 text-lg max-w-4xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach
             out to me using the form below.
           </p>
         </div>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2 space-y-8">
             <div
               className={`p-6 rounded-xl ${darkMode ? "bg-gray-800" : "bg-gray-50"
@@ -66,7 +66,7 @@ const ContactSection = ({ darkMode }: ContactSectionProps) => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Location</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className={` ${!darkMode ? 'text-gray-600' : 'text-gray-300'}`}>
                     Dhaka, Bangladesh
                   </p>
                 </div>
@@ -82,7 +82,7 @@ const ContactSection = ({ darkMode }: ContactSectionProps) => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Email</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className={` ${!darkMode ? 'text-gray-600' : 'text-gray-300'}`}>
                     nurnayem768@gmail.com
                   </p>
                 </div>
@@ -98,7 +98,7 @@ const ContactSection = ({ darkMode }: ContactSectionProps) => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Phone</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className={` ${!darkMode ? 'text-gray-600' : 'text-gray-300'}`}>
                     +880 17 9249 1909
                   </p>
                 </div>

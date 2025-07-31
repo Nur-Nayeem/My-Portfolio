@@ -10,9 +10,8 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
   return (
     <section
       id="about"
-      className={`py-20 ${
-        darkMode ? "bg-gray-800" : "bg-gray-50"
-      } transition-colors duration-300`}
+      className={`py-20 ${darkMode ? "bg-gray-800" : "bg-gray-50"
+        } transition-colors duration-300`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -79,9 +78,9 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
               </a>
             </div>
           </div>
-          <div className="order-1 lg:order-2 flex justify-center">
+          <div className="order-1 lg:order-2 flex justify-center md:justify-end">
             <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full p-[3px] bg-gradient-to-r from-purple-600 to-pink-600 shadow-xl">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full p-[3px] bg-gradient-to-r from-purple-600 to-pink-600 shadow-xl">
                 <div className="w-full h-full rounded-full bg-white dark:bg-gray-900 overflow-hidden">
                   <img
                     src={nur}
@@ -98,36 +97,22 @@ const AboutSection = ({ darkMode }: AboutSectionProps) => {
         </div>
         <div className="mt-20">
           <h3 className="text-2xl font-bold mb-8 text-center">My Skills</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div id="skills-chart" className="w-full h-80"></div>
-            <div>
-              {skills.map((skill, index) => (
-                <div key={index} className="mb-6">
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span>{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2.5">
-                    <div
-                      className="h-2.5 rounded-full"
-                      style={{
-                        width: `${skill.level}%`,
-                        background:
-                          skill.level >= 90
-                            ? "linear-gradient(to right, #a21caf, #db2777)"
-                            : skill.level >= 80
-                            ? "linear-gradient(to right, #c026d3, #f472b6)"
-                            : skill.level >= 70
-                            ? "linear-gradient(to right, #e879f9, #f9a8d4)"
-                            : skill.level >= 60
-                            ? "linear-gradient(to right, #f5d0fe, #fbcfe8)"
-                            : "linear-gradient(to right, #fae8ff, #ffe4e6)",
-                      }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-6xl mx-auto px-4">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className={`flex flex-col items-center p-4  ${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300`}
+              >
+                <img
+                  src={skill.img}
+                  alt={skill.name}
+                  className="w-16 h-16 object-contain mb-3"
+                />
+                <p className={`text-lg font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'} text-center`}>
+                  {skill.name}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
