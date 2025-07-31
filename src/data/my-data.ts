@@ -1,11 +1,18 @@
 // Skills data
 export const skills = [
-  { name: "React", level: 90 },
-  { name: "Node.js", level: 85 },
-  { name: "Express", level: 80 },
-  { name: "MongoDB", level: 75 },
-  { name: "TypeScript", level: 85 },
-  { name: "JavaScript", level: 95 },
+  { name: "HTML", img: 'https://res.cloudinary.com/dx43z0uml/image/upload/v1753939194/html-5_bwgwwf.png' },
+  { name: "CSS", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753939958/css-3_nctm0d.png" },
+  { name: "Tailwind", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753940213/tailwind-css-icon_pqngd9.png" },
+  { name: "JavaScript", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753940072/js_k74pip.png" },
+  { name: "TypeScript", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753940318/typescript-programming-language-icon_ytew37.png" },
+  { name: "React", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753940373/react-js-icon_txsjfz.png" },
+  { name: "React-Native", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753941299/react-native-app-icon_mofxzm.png" },
+  { name: "Node.js", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753940800/nodejs_irn7zr.png" },
+  { name: "Express", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753940598/express-js-icon_kggy49.png" },
+  { name: "MongoDB", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753941115/mongodb-icon_g7b8ue.png" },
+  { name: "Python", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753941169/python-programming-language-icon_bmtp18.png" },
+  { name: "Flaks", img: "https://res.cloudinary.com/dx43z0uml/image/upload/v1753941492/flask-logo-icon_wb1gip.png" },
+
 ];
 // Projects data
 export const projects = [
