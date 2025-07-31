@@ -57,7 +57,7 @@ const App = () => {
     }
   }, [darkMode]);
   // Handle form submission
-  
+
   // Toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -78,7 +78,7 @@ const App = () => {
   // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "blog", "contact"];
+      const sections = ["home", "about", "projects", "contact"];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -97,41 +97,40 @@ const App = () => {
   }, []);
   return (
     <div
-      className={`${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-      } min-h-screen transition-colors duration-300`}
+      className={`${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+        } min-h-screen transition-colors duration-300`}
     >
       {/* Navigation */}
-        <Navbar
-      darkMode={darkMode}
-      toggleDarkMode={toggleDarkMode}
-      menuOpen={menuOpen}
-      toggleMenu={toggleMenu}
-      activeSection={activeSection}
-      scrollToSection={scrollToSection}
-    />
+      <Navbar
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+        menuOpen={menuOpen}
+        toggleMenu={toggleMenu}
+        activeSection={activeSection}
+        scrollToSection={scrollToSection}
+      />
       {/* Hero Section */}
-      <HeroSection 
-      darkMode={darkMode} 
-      scrollToSection={scrollToSection} 
+      <HeroSection
+        darkMode={darkMode}
+        scrollToSection={scrollToSection}
       />
 
       {/* About Section */}
-    <AboutSection 
-    darkMode={darkMode} />
+      <AboutSection
+        darkMode={darkMode} />
 
       {/* Projects Section */}
-    <ProjectsSection
-    darkMode={darkMode}/>
-    
+      <ProjectsSection
+        darkMode={darkMode} />
+
       {/* Contact Section */}
-    <ContactSection 
-    darkMode={darkMode}  />
+      <ContactSection
+        darkMode={darkMode} />
 
       {/* Footer */}
-    <Footer 
-    darkMode={darkMode} 
-    scrollToSection={scrollToSection} />
+      <Footer
+        darkMode={darkMode}
+        scrollToSection={scrollToSection} />
 
 
       {/* Scroll to top button */}
