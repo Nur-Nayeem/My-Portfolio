@@ -1,62 +1,14 @@
-import * as echarts from "echarts";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
-import { skills } from "./data/my-data";
 import { useEffect, useState } from "react";
 const App = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-
-  useEffect(() => {
-    // Initialize skills chart
-    const chartDom = document.getElementById("skills-chart");
-    if (chartDom) {
-      const myChart = echarts.init(chartDom);
-      const option = {
-        animation: false,
-        radar: {
-          indicator: skills.map((skill) => ({ name: skill.name, max: 100 })),
-          radius: "65%",
-        },
-        series: [
-          {
-            type: "radar",
-            data: [
-              {
-                value: skills.map((skill) => skill.level),
-                name: "Skills",
-                areaStyle: {
-                  color: darkMode
-                    ? "rgba(147, 51, 234, 0.6)"
-                    : "rgba(168, 85, 247, 0.6)",
-                },
-                lineStyle: {
-                  color: darkMode ? "#db2777" : "#be185d",
-                },
-              },
-            ],
-          },
-        ],
-      };
-      myChart.setOption(option);
-      // Resize chart on window resize
-      window.addEventListener("resize", () => {
-        myChart.resize();
-      });
-      return () => {
-        window.removeEventListener("resize", () => {
-          myChart.resize();
-        });
-        myChart.dispose();
-      };
-    }
-  }, [darkMode]);
-  // Handle form submission
 
   // Toggle dark mode
   const toggleDarkMode = () => {
@@ -75,10 +27,9 @@ const App = () => {
       setMenuOpen(false);
     }
   };
-  // Update active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "projects", "contact"];
+      const sections = ["home", "about", "projects", "blog", "contact"];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
